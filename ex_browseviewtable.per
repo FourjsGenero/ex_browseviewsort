@@ -1,0 +1,26 @@
+LAYOUT (MINHEIGHT=10, MINWIDTH=80, TEXT="Browse View")
+TABLE
+{
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+[f00|f01     |f02      |f03       |f04       |f05       ]
+}
+END
+END
+ATTRIBUTES
+f00 = formonly.id, TITLE="ID";
+f01 = formonly.GROUP, TITLE="Group";
+f02 = formonly.category, TITLE="Category";
+f03 = formonly.qty TYPE INTEGER, TITLE="Quantity";
+f04 = formonly.price TYPE DECIMAL, TITLE="Price";
+f05 = formonly.last_sold TYPE DATE, TITLE="Date Last Sold";
+PHANTOM formonly.sort_idx;
+INSTRUCTIONS
+SCREEN RECORD scr(id, group, category, qty, price, last_sold, sort_idx)

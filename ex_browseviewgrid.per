@@ -1,0 +1,28 @@
+TOOLBAR
+ITEM first
+ITEM previous
+ITEM browse (IMAGE="fa-list", TEXT="Browse")
+ITEM next
+ITEM last
+END
+
+LAYOUT (MINHEIGHT=10, MINWIDTH=80, TEXT="Record View")
+GRID
+{
+ID       [f00   ]
+Group    [f01   ]
+Category [f02   ]
+Quantity [f03   ]
+Price    [f04   ]
+Last Sold[f05   ]
+}
+END
+END
+ATTRIBUTES
+f00 = formonly.id;
+f01 = formonly.group;
+f02 = formonly.category;
+f03 = formonly.qty TYPE INTEGER;
+f04 = formonly.price TYPE DECIMAL;
+f05 = formonly.last_sold TYPE DATE;
+PHANTOM formonly.sort_idx;
