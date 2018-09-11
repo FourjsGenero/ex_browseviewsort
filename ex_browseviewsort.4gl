@@ -59,12 +59,15 @@ DEFINE idx INTEGER
             CALL state(DIALOG, idx, arr.getLength())
             
         ON ACTION browse
-            -- Browse list in DISPLAY ARRAY with SORT
+            -- Browse list in DISPLAY ARRAY with ON SORT
             CALL do_browse(idx) RETURNING idx
-            -- Sort the array based on current position
+            
+            -- Sort the array based on value in sort_idx
             CALL arr.sort("sort_idx", FALSE)
+
             -- Display selected value
             DISPLAY BY NAME arr[idx].*
+            
             CALL state(DIALOG, idx, arr.getLength())  
             
         ON ACTION next
