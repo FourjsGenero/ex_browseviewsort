@@ -32,7 +32,7 @@ DEFINE idx INTEGER
         LET arr[i].sort_idx = i
     END FOR
     LET idx = 1
-    
+    CLOSE WINDOW SCREEN
     OPEN WINDOW w WITH FORM "ex_browseviewgrid"
     
     MENU ""
